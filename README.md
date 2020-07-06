@@ -7,7 +7,4 @@ Currently collecting all revelant datasets:
 
 ***
 
-![Image of Cop Car](images/police_car.jpg)*Photo by Matt Popovich on Unsplash*
-
-
-The Crime dataset compiled by the city of Denver includes all criminal offenses in the City and County of Denver for the previous five calendar year, **plus the current year to date**
+![Image of Cop Car](images/police_car.jpg)*Photo by Matt Popovich on Unsplash* 
