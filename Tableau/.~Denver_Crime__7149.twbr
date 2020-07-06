@@ -1,0 +1,1364 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20202.20.0614.2338                               -->
+<workbook source-build='2020.2.2 (20202.20.0614.2338)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <CascadingFilters />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='crime_info' inline='true' name='federated.0ff3in30e3wv4g1fgt99j1pnmgpe' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='crime_info' name='textscan.0f8d7wq0tmnozp12ru74s17ynxx0'>
+            <connection class='textscan' directory='/Users/chrisb/Documents/Repositories/DenverCrime_Analysis/data/Clean' filename='crime_info.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0f8d7wq0tmnozp12ru74s17ynxx0' name='crime_info.csv' table='[crime_info#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='INCIDENT_ID' ordinal='0' />
+            <column datatype='integer' name='OFFENSE_ID' ordinal='1' />
+            <column datatype='string' name='OFFENSE_CODE' ordinal='2' />
+            <column datatype='integer' name='OFFENSE_CODE_EXTENSION' ordinal='3' />
+            <column datatype='string' name='OFFENSE_TYPE_ID' ordinal='4' />
+            <column datatype='string' name='OFFENSE_CATEGORY_ID' ordinal='5' />
+            <column datatype='datetime' name='FIRST_OCCURRENCE_DATE' ordinal='6' />
+            <column datatype='datetime' name='REPORTED_DATE' ordinal='7' />
+            <column datatype='integer' name='DISTRICT_ID' ordinal='8' />
+            <column datatype='integer' name='PRECINCT_ID' ordinal='9' />
+            <column datatype='string' name='NEIGHBORHOOD_ID' ordinal='10' />
+            <column datatype='boolean' name='IS_CRIME' ordinal='11' />
+            <column datatype='boolean' name='IS_TRAFFIC' ordinal='12' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0f8d7wq0tmnozp12ru74s17ynxx0' name='crime_info.csv' table='[crime_info#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='INCIDENT_ID' ordinal='0' />
+              <column datatype='integer' name='OFFENSE_ID' ordinal='1' />
+              <column datatype='string' name='OFFENSE_CODE' ordinal='2' />
+              <column datatype='integer' name='OFFENSE_CODE_EXTENSION' ordinal='3' />
+              <column datatype='string' name='OFFENSE_TYPE_ID' ordinal='4' />
+              <column datatype='string' name='OFFENSE_CATEGORY_ID' ordinal='5' />
+              <column datatype='datetime' name='FIRST_OCCURRENCE_DATE' ordinal='6' />
+              <column datatype='datetime' name='REPORTED_DATE' ordinal='7' />
+              <column datatype='integer' name='DISTRICT_ID' ordinal='8' />
+              <column datatype='integer' name='PRECINCT_ID' ordinal='9' />
+              <column datatype='string' name='NEIGHBORHOOD_ID' ordinal='10' />
+              <column datatype='boolean' name='IS_CRIME' ordinal='11' />
+              <column datatype='boolean' name='IS_TRAFFIC' ordinal='12' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0f8d7wq0tmnozp12ru74s17ynxx0' name='geo_info.csv' table='[geo_info#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='OFFENSE_ID' ordinal='0' />
+              <column datatype='string' name='INCIDENT_ADDRESS' ordinal='1' />
+              <column datatype='real' name='GEO_X' ordinal='2' />
+              <column datatype='real' name='GEO_Y' ordinal='3' />
+              <column datatype='real' name='GEO_LON' ordinal='4' />
+              <column datatype='real' name='GEO_LAT' ordinal='5' />
+              <column datatype='string' name='NEIGHBORHOOD_ID' ordinal='6' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[DISTRICT_ID]' value='[crime_info.csv].[DISTRICT_ID]' />
+          <map key='[FIRST_OCCURRENCE_DATE]' value='[crime_info.csv].[FIRST_OCCURRENCE_DATE]' />
+          <map key='[GEO_LAT]' value='[geo_info.csv].[GEO_LAT]' />
+          <map key='[GEO_LON]' value='[geo_info.csv].[GEO_LON]' />
+          <map key='[GEO_X]' value='[geo_info.csv].[GEO_X]' />
+          <map key='[GEO_Y]' value='[geo_info.csv].[GEO_Y]' />
+          <map key='[INCIDENT_ADDRESS]' value='[geo_info.csv].[INCIDENT_ADDRESS]' />
+          <map key='[INCIDENT_ID]' value='[crime_info.csv].[INCIDENT_ID]' />
+          <map key='[IS_CRIME]' value='[crime_info.csv].[IS_CRIME]' />
+          <map key='[IS_TRAFFIC]' value='[crime_info.csv].[IS_TRAFFIC]' />
+          <map key='[NEIGHBORHOOD_ID (geo_info.csv)]' value='[geo_info.csv].[NEIGHBORHOOD_ID]' />
+          <map key='[NEIGHBORHOOD_ID]' value='[crime_info.csv].[NEIGHBORHOOD_ID]' />
+          <map key='[OFFENSE_CATEGORY_ID]' value='[crime_info.csv].[OFFENSE_CATEGORY_ID]' />
+          <map key='[OFFENSE_CODE]' value='[crime_info.csv].[OFFENSE_CODE]' />
+          <map key='[OFFENSE_CODE_EXTENSION]' value='[crime_info.csv].[OFFENSE_CODE_EXTENSION]' />
+          <map key='[OFFENSE_ID (geo_info.csv)]' value='[geo_info.csv].[OFFENSE_ID]' />
+          <map key='[OFFENSE_ID]' value='[crime_info.csv].[OFFENSE_ID]' />
+          <map key='[OFFENSE_TYPE_ID]' value='[crime_info.csv].[OFFENSE_TYPE_ID]' />
+          <map key='[PRECINCT_ID]' value='[crime_info.csv].[PRECINCT_ID]' />
+          <map key='[REPORTED_DATE]' value='[crime_info.csv].[REPORTED_DATE]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[crime_info.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[geo_info.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>INCIDENT_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[INCIDENT_ID]</local-name>
+            <parent-name>[crime_info.csv]</parent-name>
+            <remote-alias>INCIDENT_ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OFFENSE_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OFFENSE_ID]</local-name>
+            <parent-name>[crime_info.csv]</parent-name>
+            <remote-alias>OFFENSE_ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OFFENSE_CODE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[OFFENSE_CODE]</local-name>
+            <parent-name>[crime_info.csv]</parent-name>
+            <remote-alias>OFFENSE_CODE</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OFFENSE_CODE_EXTENSION</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OFFENSE_CODE_EXTENSION]</local-name>
+            <parent-name>[crime_info.csv]</parent-name>
+            <remote-alias>OFFENSE_CODE_EXTENSION</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OFFENSE_TYPE_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[OFFENSE_TYPE_ID]</local-name>
+            <parent-name>[crime_info.csv]</parent-name>
+            <remote-alias>OFFENSE_TYPE_ID</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OFFENSE_CATEGORY_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[OFFENSE_CATEGORY_ID]</local-name>
+            <parent-name>[crime_info.csv]</parent-name>
+            <remote-alias>OFFENSE_CATEGORY_ID</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FIRST_OCCURRENCE_DATE</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[FIRST_OCCURRENCE_DATE]</local-name>
+            <parent-name>[crime_info.csv]</parent-name>
+            <remote-alias>FIRST_OCCURRENCE_DATE</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REPORTED_DATE</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[REPORTED_DATE]</local-name>
+            <parent-name>[crime_info.csv]</parent-name>
+            <remote-alias>REPORTED_DATE</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DISTRICT_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DISTRICT_ID]</local-name>
+            <parent-name>[crime_info.csv]</parent-name>
+            <remote-alias>DISTRICT_ID</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PRECINCT_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PRECINCT_ID]</local-name>
+            <parent-name>[crime_info.csv]</parent-name>
+            <remote-alias>PRECINCT_ID</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NEIGHBORHOOD_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NEIGHBORHOOD_ID]</local-name>
+            <parent-name>[crime_info.csv]</parent-name>
+            <remote-alias>NEIGHBORHOOD_ID</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IS_CRIME</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[IS_CRIME]</local-name>
+            <parent-name>[crime_info.csv]</parent-name>
+            <remote-alias>IS_CRIME</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IS_TRAFFIC</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[IS_TRAFFIC]</local-name>
+            <parent-name>[crime_info.csv]</parent-name>
+            <remote-alias>IS_TRAFFIC</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OFFENSE_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OFFENSE_ID (geo_info.csv)]</local-name>
+            <parent-name>[geo_info.csv]</parent-name>
+            <remote-alias>OFFENSE_ID</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[geo_info.csv_137E685A502C440987D506568C10A08B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>INCIDENT_ADDRESS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[INCIDENT_ADDRESS]</local-name>
+            <parent-name>[geo_info.csv]</parent-name>
+            <remote-alias>INCIDENT_ADDRESS</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[geo_info.csv_137E685A502C440987D506568C10A08B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GEO_X</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[GEO_X]</local-name>
+            <parent-name>[geo_info.csv]</parent-name>
+            <remote-alias>GEO_X</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[geo_info.csv_137E685A502C440987D506568C10A08B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GEO_Y</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[GEO_Y]</local-name>
+            <parent-name>[geo_info.csv]</parent-name>
+            <remote-alias>GEO_Y</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[geo_info.csv_137E685A502C440987D506568C10A08B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GEO_LON</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[GEO_LON]</local-name>
+            <parent-name>[geo_info.csv]</parent-name>
+            <remote-alias>GEO_LON</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[geo_info.csv_137E685A502C440987D506568C10A08B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GEO_LAT</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[GEO_LAT]</local-name>
+            <parent-name>[geo_info.csv]</parent-name>
+            <remote-alias>GEO_LAT</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[geo_info.csv_137E685A502C440987D506568C10A08B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NEIGHBORHOOD_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NEIGHBORHOOD_ID (geo_info.csv)]</local-name>
+            <parent-name>[geo_info.csv]</parent-name>
+            <remote-alias>NEIGHBORHOOD_ID</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[geo_info.csv_137E685A502C440987D506568C10A08B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Offense Count' datatype='integer' name='[Calculation_351773352353615872]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([OFFENSE_ID])' />
+      </column>
+      <column aggregation='Sum' caption='District' datatype='integer' name='[DISTRICT_ID]' role='dimension' semantic-role='[Congress].[Name]' type='ordinal' />
+      <column caption='First Occurrence Date' datatype='datetime' name='[FIRST_OCCURRENCE_DATE]' role='dimension' type='ordinal' />
+      <column aggregation='Avg' caption='Latitude' datatype='real' name='[GEO_LAT]' role='dimension' semantic-role='[Geographical].[Latitude]' type='ordinal' />
+      <column aggregation='Avg' caption='Longitude' datatype='real' name='[GEO_LON]' role='dimension' semantic-role='[Geographical].[Longitude]' type='ordinal' />
+      <column aggregation='Avg' caption='Geo X' datatype='real' name='[GEO_X]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Geo Y' datatype='real' name='[GEO_Y]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Incident Address' datatype='string' name='[INCIDENT_ADDRESS]' role='dimension' type='nominal' />
+      <column caption='Incident Id' datatype='integer' name='[INCIDENT_ID]' role='dimension' type='ordinal' />
+      <column caption='Is Crime' datatype='boolean' name='[IS_CRIME]' role='dimension' type='nominal' />
+      <column caption='Is Traffic' datatype='boolean' name='[IS_TRAFFIC]' role='dimension' type='nominal' />
+      <column caption='NeighborhoodID' datatype='string' name='[NEIGHBORHOOD_ID (geo_info.csv)]' role='dimension' type='nominal' />
+      <column caption='Neighborhood' datatype='string' name='[NEIGHBORHOOD_ID]' role='dimension' type='nominal' />
+      <column caption='Offense Category Id' datatype='string' name='[OFFENSE_CATEGORY_ID]' role='dimension' type='nominal' />
+      <column caption='Code' datatype='string' name='[OFFENSE_CODE]' role='dimension' type='nominal' />
+      <column caption='Offense Code Extension' datatype='integer' name='[OFFENSE_CODE_EXTENSION]' role='measure' type='quantitative' />
+      <column caption='Offense_ID' datatype='integer' name='[OFFENSE_ID (geo_info.csv)]' role='dimension' type='ordinal' />
+      <column caption='OffenseID' datatype='integer' name='[OFFENSE_ID]' role='dimension' type='ordinal' />
+      <column caption='Offense' datatype='string' name='[OFFENSE_TYPE_ID]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Precinct' datatype='integer' name='[PRECINCT_ID]' role='dimension' semantic-role='[County].[Name]' type='ordinal' />
+      <column caption='Reported Date' datatype='datetime' name='[REPORTED_DATE]' role='dimension' type='ordinal' />
+      <_.fcp.ObjectModelTableType.true...column caption='crime_info.csv' datatype='table' name='[__tableau_internal_object_id__].[crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='geo_info.csv' datatype='table' name='[__tableau_internal_object_id__].[geo_info.csv_137E685A502C440987D506568C10A08B]' role='measure' type='quantitative' />
+      <column-instance column='[DISTRICT_ID]' derivation='None' name='[none:DISTRICT_ID:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[IS_TRAFFIC]' derivation='None' name='[none:IS_TRAFFIC:nk]' pivot='key' type='nominal' />
+      <drill-paths>
+        <drill-path name='Geographic'>
+          <field>[DISTRICT_ID]</field>
+          <field>[PRECINCT_ID]</field>
+          <field>[NEIGHBORHOOD_ID]</field>
+        </drill-path>
+        <drill-path name='Offenses'>
+          <field>[OFFENSE_CATEGORY_ID]</field>
+          <field>[OFFENSE_CODE]</field>
+          <field>[OFFENSE_TYPE_ID]</field>
+        </drill-path>
+      </drill-paths>
+      <_.fcp.SchemaViewerObjectModel.false...folder name='Geolocation' role='dimensions'>
+        <folder-item name='[GEO_LAT]' type='field' />
+        <folder-item name='[GEO_LON]' type='field' />
+      </_.fcp.SchemaViewerObjectModel.false...folder>
+      <_.fcp.SchemaViewerObjectModel.true...folders-common>
+        <folder name='Geolocation'>
+          <folder-item name='[GEO_LAT]' type='field' />
+          <folder-item name='[GEO_LON]' type='field' />
+        </folder>
+      </_.fcp.SchemaViewerObjectModel.true...folders-common>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='false' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:IS_TRAFFIC:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>false</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>true</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:DISTRICT_ID:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='crime_info.csv' id='crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27'>
+            <properties context=''>
+              <relation connection='textscan.0f8d7wq0tmnozp12ru74s17ynxx0' name='crime_info.csv' table='[crime_info#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='INCIDENT_ID' ordinal='0' />
+                  <column datatype='integer' name='OFFENSE_ID' ordinal='1' />
+                  <column datatype='string' name='OFFENSE_CODE' ordinal='2' />
+                  <column datatype='integer' name='OFFENSE_CODE_EXTENSION' ordinal='3' />
+                  <column datatype='string' name='OFFENSE_TYPE_ID' ordinal='4' />
+                  <column datatype='string' name='OFFENSE_CATEGORY_ID' ordinal='5' />
+                  <column datatype='datetime' name='FIRST_OCCURRENCE_DATE' ordinal='6' />
+                  <column datatype='datetime' name='REPORTED_DATE' ordinal='7' />
+                  <column datatype='integer' name='DISTRICT_ID' ordinal='8' />
+                  <column datatype='integer' name='PRECINCT_ID' ordinal='9' />
+                  <column datatype='string' name='NEIGHBORHOOD_ID' ordinal='10' />
+                  <column datatype='boolean' name='IS_CRIME' ordinal='11' />
+                  <column datatype='boolean' name='IS_TRAFFIC' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='geo_info.csv' id='geo_info.csv_137E685A502C440987D506568C10A08B'>
+            <properties context=''>
+              <relation connection='textscan.0f8d7wq0tmnozp12ru74s17ynxx0' name='geo_info.csv' table='[geo_info#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='OFFENSE_ID' ordinal='0' />
+                  <column datatype='string' name='INCIDENT_ADDRESS' ordinal='1' />
+                  <column datatype='real' name='GEO_X' ordinal='2' />
+                  <column datatype='real' name='GEO_Y' ordinal='3' />
+                  <column datatype='real' name='GEO_LON' ordinal='4' />
+                  <column datatype='real' name='GEO_LAT' ordinal='5' />
+                  <column datatype='string' name='NEIGHBORHOOD_ID' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[OFFENSE_ID]' />
+              <expression op='[OFFENSE_ID (geo_info.csv)]' />
+            </expression>
+            <first-end-point object-id='crime_info.csv_F3E24BEF64D24410B02D1A09E38BAE27' />
+            <second-end-point object-id='geo_info.csv_137E685A502C440987D506568C10A08B' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <shared-views>
+    <shared-view name='federated.0ff3in30e3wv4g1fgt99j1pnmgpe'>
+      <datasources>
+        <datasource caption='crime_info' name='federated.0ff3in30e3wv4g1fgt99j1pnmgpe' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0ff3in30e3wv4g1fgt99j1pnmgpe'>
+        <column caption='Reported Date' datatype='datetime' name='[REPORTED_DATE]' role='dimension' type='ordinal' />
+        <column-instance column='[REPORTED_DATE]' derivation='Year' name='[yr:REPORTED_DATE:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[yr:REPORTED_DATE:ok]'>
+        <groupfilter function='member' level='[yr:REPORTED_DATE:ok]' member='2020' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name='Map Breakdown'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime_info' name='federated.0ff3in30e3wv4g1fgt99j1pnmgpe' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0ff3in30e3wv4g1fgt99j1pnmgpe'>
+            <column aggregation='Sum' caption='District' datatype='integer' name='[DISTRICT_ID]' role='dimension' semantic-role='[Congress].[Name]' type='ordinal' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' name='[GEO_LAT]' role='dimension' semantic-role='[Geographical].[Latitude]' type='ordinal' />
+            <column aggregation='Avg' caption='Longitude' datatype='real' name='[GEO_LON]' role='dimension' semantic-role='[Geographical].[Longitude]' type='ordinal' />
+            <column caption='Neighborhood' datatype='string' name='[NEIGHBORHOOD_ID]' role='dimension' type='nominal' />
+            <column caption='Offense' datatype='string' name='[OFFENSE_TYPE_ID]' role='dimension' type='nominal' />
+            <column caption='Reported Date' datatype='datetime' name='[REPORTED_DATE]' role='dimension' type='ordinal' />
+            <column-instance column='[NEIGHBORHOOD_ID]' derivation='Attribute' name='[attr:NEIGHBORHOOD_ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[OFFENSE_TYPE_ID]' derivation='Attribute' name='[attr:OFFENSE_TYPE_ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[REPORTED_DATE]' derivation='Attribute' name='[attr:REPORTED_DATE:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[DISTRICT_ID]' derivation='None' name='[none:DISTRICT_ID:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[GEO_LAT]' derivation='None' name='[none:GEO_LAT:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[GEO_LON]' derivation='None' name='[none:GEO_LON:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[REPORTED_DATE]' derivation='Year' name='[yr:REPORTED_DATE:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:DISTRICT_ID:ok]' filter-group='3'>
+            <groupfilter function='member' level='[none:DISTRICT_ID:ok]' member='4' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[yr:REPORTED_DATE:ok]</column>
+            <column>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:DISTRICT_ID:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:GEO_LON:qk]' field-type='quantitative' max='-11592984.477814628' min='-11764180.75596467' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:GEO_LAT:qk]' field-type='quantitative' max='4883385.600285667' min='4801871.190388184' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='streets' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:DISTRICT_ID:ok]' value='District'>
+              <formatted-text>
+                <run>District</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[yr:REPORTED_DATE:ok]' value='Year'>
+              <formatted-text>
+                <run>Year</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:DISTRICT_ID:ok]' />
+              <tooltip column='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[attr:NEIGHBORHOOD_ID:nk]' />
+              <tooltip column='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[attr:OFFENSE_TYPE_ID:nk]' />
+              <tooltip column='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[attr:REPORTED_DATE:ok]' />
+              <geometry column='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[Geometry (generated)]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1'><![CDATA[<[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[attr:NEIGHBORHOOD_ID:nk]>]]></run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1'>Offense:</run>
+                <run fontalignment='1'><![CDATA[ <[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[attr:OFFENSE_TYPE_ID:nk]>
+<[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[attr:REPORTED_DATE:ok]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.0099999997764825821' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:GEO_LAT:qk]</rows>
+        <cols>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:GEO_LON:qk]</cols>
+      </table>
+      <simple-id uuid='{A91D1ED5-6A16-4896-8F0A-F11E04049ADA}' />
+    </worksheet>
+    <worksheet name='Neighboorhood Breakdown'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='8'>Neighborhoods</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime_info' name='federated.0ff3in30e3wv4g1fgt99j1pnmgpe' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ff3in30e3wv4g1fgt99j1pnmgpe'>
+            <column caption='Offense Count' datatype='integer' name='[Calculation_351773352353615872]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([OFFENSE_ID])' />
+            </column>
+            <column aggregation='Sum' caption='District' datatype='integer' name='[DISTRICT_ID]' role='dimension' semantic-role='[Congress].[Name]' type='ordinal' />
+            <column caption='Neighborhood' datatype='string' name='[NEIGHBORHOOD_ID]' role='dimension' type='nominal' />
+            <column caption='OffenseID' datatype='integer' name='[OFFENSE_ID]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Precinct' datatype='integer' name='[PRECINCT_ID]' role='dimension' semantic-role='[County].[Name]' type='ordinal' />
+            <column caption='Reported Date' datatype='datetime' name='[REPORTED_DATE]' role='dimension' type='ordinal' />
+            <column-instance column='[DISTRICT_ID]' derivation='None' name='[none:DISTRICT_ID:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[NEIGHBORHOOD_ID]' derivation='None' name='[none:NEIGHBORHOOD_ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[PRECINCT_ID]' derivation='None' name='[none:PRECINCT_ID:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_351773352353615872]' derivation='User' name='[usr:Calculation_351773352353615872:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[REPORTED_DATE]' derivation='Year' name='[yr:REPORTED_DATE:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:DISTRICT_ID:ok]' filter-group='3'>
+            <groupfilter function='member' level='[none:DISTRICT_ID:ok]' member='4' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:NEIGHBORHOOD_ID:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[usr:Calculation_351773352353615872:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[yr:REPORTED_DATE:ok]</column>
+            <column>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:DISTRICT_ID:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:NEIGHBORHOOD_ID:nk]' value='152' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='font-size' value='8' />
+          </style-rule>
+          <style-rule element='field-labels-decoration'>
+            <format attr='text-orientation' value='0' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:NEIGHBORHOOD_ID:nk]' value='8' />
+            <format attr='font-size' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:PRECINCT_ID:ok]' value='8' />
+            <format attr='text-align' scope='rows' value='center' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='8' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[usr:Calculation_351773352353615872:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:NEIGHBORHOOD_ID:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{A248ABB2-F9D6-491A-8A9E-AA18B6EA8510}' />
+    </worksheet>
+    <worksheet name='Offenses'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='12'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime_info' name='federated.0ff3in30e3wv4g1fgt99j1pnmgpe' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ff3in30e3wv4g1fgt99j1pnmgpe'>
+            <column caption='Offense Count' datatype='integer' name='[Calculation_351773352353615872]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([OFFENSE_ID])' />
+            </column>
+            <column aggregation='Sum' caption='District' datatype='integer' name='[DISTRICT_ID]' role='dimension' semantic-role='[Congress].[Name]' type='ordinal' />
+            <column caption='Offense Category Id' datatype='string' name='[OFFENSE_CATEGORY_ID]' role='dimension' type='nominal' />
+            <column caption='Code' datatype='string' name='[OFFENSE_CODE]' role='dimension' type='nominal' />
+            <column caption='OffenseID' datatype='integer' name='[OFFENSE_ID]' role='dimension' type='ordinal' />
+            <column caption='Offense' datatype='string' name='[OFFENSE_TYPE_ID]' role='dimension' type='nominal' />
+            <column caption='Reported Date' datatype='datetime' name='[REPORTED_DATE]' role='dimension' type='ordinal' />
+            <column-instance column='[DISTRICT_ID]' derivation='None' name='[none:DISTRICT_ID:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[OFFENSE_CATEGORY_ID]' derivation='None' name='[none:OFFENSE_CATEGORY_ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[OFFENSE_CODE]' derivation='None' name='[none:OFFENSE_CODE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[OFFENSE_TYPE_ID]' derivation='None' name='[none:OFFENSE_TYPE_ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_351773352353615872]' derivation='User' name='[usr:Calculation_351773352353615872:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[REPORTED_DATE]' derivation='Year' name='[yr:REPORTED_DATE:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:DISTRICT_ID:ok]' filter-group='3'>
+            <groupfilter function='member' level='[none:DISTRICT_ID:ok]' member='4' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter from='&quot;AGGRAVATED-ASSAULT&quot;' function='range' level='[none:OFFENSE_CATEGORY_ID:nk]' to='&quot;ARSON&quot;' />
+              <groupfilter from='&quot;BURGLARY&quot;' function='range' level='[none:OFFENSE_CATEGORY_ID:nk]' to='&quot;SEXUAL-ASSAULT&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CATEGORY_ID:nk]' member='&quot;WHITE-COLLAR-CRIME&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]</column>
+            <column>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[yr:REPORTED_DATE:ok]</column>
+            <column>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:DISTRICT_ID:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[usr:Calculation_351773352353615872:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_TYPE_ID:nk]' value='8' />
+            <format attr='text-align' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CODE:nk]' value='auto' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]' value='44' />
+            <format attr='width' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_TYPE_ID:nk]' value='380' />
+            <format attr='background-color' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]' value='#f5eddc' />
+            <format attr='band-color' scope='rows' value='#dfedeb' />
+            <format attr='height-header' value='10' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='wrap' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]' value='on' />
+            <format attr='vertical-align' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]' value='center' />
+            <format attr='text-align' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]' value='center' />
+            <format attr='text-orientation' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]' value='-90' />
+            <format attr='font-size' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_TYPE_ID:nk]' value='8' />
+            <format attr='text-align' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CODE:nk]' value='center' />
+            <format attr='font-weight' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]' value='bold' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#dfedeb' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-level' scope='rows' value='1' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk] / ([federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CODE:nk] / [federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_TYPE_ID:nk]))</rows>
+        <cols>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[usr:Calculation_351773352353615872:qk]</cols>
+      </table>
+      <simple-id uuid='{2BBB9336-03DE-45BD-86A6-018F7AF1E256}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime_info' name='federated.0ff3in30e3wv4g1fgt99j1pnmgpe' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0ff3in30e3wv4g1fgt99j1pnmgpe'>
+            <column aggregation='Avg' caption='Latitude' datatype='real' name='[GEO_LAT]' role='dimension' semantic-role='[Geographical].[Latitude]' type='ordinal' />
+            <column aggregation='Avg' caption='Longitude' datatype='real' name='[GEO_LON]' role='dimension' semantic-role='[Geographical].[Longitude]' type='ordinal' />
+            <column caption='Reported Date' datatype='datetime' name='[REPORTED_DATE]' role='dimension' type='ordinal' />
+            <column-instance column='[GEO_LAT]' derivation='None' name='[none:GEO_LAT:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[GEO_LON]' derivation='None' name='[none:GEO_LON:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[REPORTED_DATE]' derivation='Year' name='[yr:REPORTED_DATE:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[yr:REPORTED_DATE:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:GEO_LON:qk]' field-type='quantitative' max='-11645108.59557095' min='-11718287.223441774' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:GEO_LAT:qk]' field-type='quantitative' max='4848211.4247206943' min='4804697.0861585392' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+            <format attr='enabled' id='admin-3-4-boundaries-bg' value='false' />
+            <format attr='enabled' id='admin-3-4-boundaries' value='false' />
+            <format attr='enabled' id='state-label-sm' value='false' />
+            <format attr='enabled' id='state-label-md' value='false' />
+            <format attr='enabled' id='state-label-lg' value='false' />
+            <format attr='enabled' id='water-label-sm' value='false' />
+            <format attr='enabled' id='water-label' value='false' />
+            <format attr='enabled' id='waterway-label' value='false' />
+            <format attr='enabled' id='marine-label-sm-ln' value='false' />
+            <format attr='enabled' id='marine-label-sm-pt' value='false' />
+            <format attr='enabled' id='marine-label-md-ln' value='false' />
+            <format attr='enabled' id='marine-label-md-pt' value='false' />
+            <format attr='enabled' id='marine-label-lg-ln' value='false' />
+            <format attr='enabled' id='marine-label-lg-pt' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='outdoors' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.097955800592899323' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:GEO_LAT:qk]</rows>
+        <cols>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:GEO_LON:qk]</cols>
+      </table>
+      <simple-id uuid='{598C5ACE-8774-4176-89C8-4460A993C1F4}' />
+    </worksheet>
+    <worksheet name='Vehicle Related Offenses'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='12'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime_info' name='federated.0ff3in30e3wv4g1fgt99j1pnmgpe' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ff3in30e3wv4g1fgt99j1pnmgpe'>
+            <column caption='Offense Count' datatype='integer' name='[Calculation_351773352353615872]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([OFFENSE_ID])' />
+            </column>
+            <column aggregation='Sum' caption='District' datatype='integer' name='[DISTRICT_ID]' role='dimension' semantic-role='[Congress].[Name]' type='ordinal' />
+            <column caption='Offense Category Id' datatype='string' name='[OFFENSE_CATEGORY_ID]' role='dimension' type='nominal' />
+            <column caption='Code' datatype='string' name='[OFFENSE_CODE]' role='dimension' type='nominal' />
+            <column caption='OffenseID' datatype='integer' name='[OFFENSE_ID]' role='dimension' type='ordinal' />
+            <column caption='Offense' datatype='string' name='[OFFENSE_TYPE_ID]' role='dimension' type='nominal' />
+            <column caption='Reported Date' datatype='datetime' name='[REPORTED_DATE]' role='dimension' type='ordinal' />
+            <column-instance column='[DISTRICT_ID]' derivation='None' name='[none:DISTRICT_ID:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[OFFENSE_CATEGORY_ID]' derivation='None' name='[none:OFFENSE_CATEGORY_ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[OFFENSE_CODE]' derivation='None' name='[none:OFFENSE_CODE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[OFFENSE_TYPE_ID]' derivation='None' name='[none:OFFENSE_TYPE_ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_351773352353615872]' derivation='User' name='[usr:Calculation_351773352353615872:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[REPORTED_DATE]' derivation='Year' name='[yr:REPORTED_DATE:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:DISTRICT_ID:ok]' filter-group='3'>
+            <groupfilter function='member' level='[none:DISTRICT_ID:ok]' member='4' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:OFFENSE_CATEGORY_ID:nk]' member='&quot;AUTO-THEFT&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CATEGORY_ID:nk]' member='&quot;THEFT-FROM-MOTOR-VEHICLE&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CATEGORY_ID:nk]' member='&quot;TRAFFIC-ACCIDENT&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]</column>
+            <column>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[yr:REPORTED_DATE:ok]</column>
+            <column>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:DISTRICT_ID:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[usr:Calculation_351773352353615872:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_TYPE_ID:nk]' value='93' />
+            <format attr='width' value='89' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]' value='72' />
+            <format attr='width' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_TYPE_ID:nk]' value='216' />
+            <format attr='background-color' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]' value='#f5eddc' />
+            <format attr='band-color' scope='rows' value='#dfedeb' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]' value='-90' />
+            <format attr='text-align' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]' value='center' />
+            <format attr='vertical-align' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]' value='center' />
+            <format attr='wrap' field='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk]' value='on' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#dfedeb' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-level' scope='rows' value='1' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CATEGORY_ID:nk] / ([federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_CODE:nk] / [federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:OFFENSE_TYPE_ID:nk]))</rows>
+        <cols>[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[usr:Calculation_351773352353615872:qk]</cols>
+      </table>
+      <simple-id uuid='{CEFC160C-066B-4265-9E32-C769C6C1F28F}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Crime-Dashboard'>
+      <style />
+      <size maxheight='900' maxwidth='1300' minheight='900' minwidth='1300' preset-index='1' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='crime_info' name='federated.0ff3in30e3wv4g1fgt99j1pnmgpe' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0ff3in30e3wv4g1fgt99j1pnmgpe'>
+        <column aggregation='Sum' caption='District' datatype='integer' name='[DISTRICT_ID]' role='dimension' semantic-role='[Congress].[Name]' type='ordinal' />
+        <column caption='Reported Date' datatype='datetime' name='[REPORTED_DATE]' role='dimension' type='ordinal' />
+        <column-instance column='[DISTRICT_ID]' derivation='None' name='[none:DISTRICT_ID:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[REPORTED_DATE]' derivation='Year' name='[yr:REPORTED_DATE:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='57575' id='5' param='horz' w='15847' x='83538' y='5647'>
+            <zone h='57575' id='9' name='Neighboorhood Breakdown' show-title='false' w='15847' x='83538' y='5647'>
+              <layout-cache cell-count-w='1' non-cell-size-w='152' type-h='cell' type-w='cell' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='57575' id='6' name='Map Breakdown' show-title='false' w='82923' x='615' y='5647'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='4758' id='10' param='horz' w='49385' x='50000' y='889'>
+            <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='4758' id='7' mode='slider' name='Map Breakdown' param='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[yr:REPORTED_DATE:ok]' w='49385' x='50000' y='889'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='4758' id='8' mode='slider' name='Map Breakdown' param='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:DISTRICT_ID:ok]' values='cascading' w='49385' x='615' y='889'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' fixed-size='342' h='35889' id='11' is-fixed='true' param='horz' w='98770' x='615' y='63222'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='35889' id='12' param='horz' w='98770' x='615' y='63222'>
+              <zone fixed-size='688' h='35889' id='13' is-fixed='true' name='Offenses' w='53538' x='615' y='63222'>
+                <layout-cache fixed-size-h='2658' minwidth='623' type-h='fixed' type-w='scalable' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='35889' id='15' name='Vehicle Related Offenses' w='45232' x='54153' y='63222'>
+                <layout-cache fixed-size-h='439' minwidth='470' type-h='fixed' type-w='scalable' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1300' minheight='1300' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='27' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='26' param='vert' w='84000' x='8000' y='8000'>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='4758' id='7' mode='slider' name='Map Breakdown' param='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[yr:REPORTED_DATE:ok]' w='49385' x='50000' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='4758' id='8' mode='slider' name='Map Breakdown' param='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[none:DISTRICT_ID:ok]' values='cascading' w='49385' x='615' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='57575' id='6' is-fixed='true' name='Map Breakdown' show-title='false' w='67693' x='615' y='5647'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='57575' id='9' is-fixed='true' name='Neighboorhood Breakdown' show-title='false' w='31077' x='68308' y='5647'>
+                  <layout-cache cell-count-w='1' non-cell-size-w='332' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35889' id='13' is-fixed='true' name='Offenses' w='53538' x='615' y='63222'>
+                  <layout-cache fixed-size-h='2658' minwidth='623' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35889' id='15' is-fixed='true' name='Vehicle Related Offenses' w='45232' x='54153' y='63222'>
+                  <layout-cache fixed-size-h='439' minwidth='470' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{E0BF184C-9C39-4BD5-A951-F328D838FE06}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='Crime-Dashboard'>
+      <viewpoints>
+        <viewpoint name='Map Breakdown'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Neighboorhood Breakdown'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Offenses'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Vehicle Related Offenses'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='8' />
+      <simple-id uuid='{C4FD4FA3-DFC8-49C1-87E5-F32A19B8046E}' />
+    </window>
+    <window class='worksheet' name='Neighboorhood Breakdown'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{824C6A9A-6D2E-4ED1-B4D4-3B476F7DFEA1}' />
+    </window>
+    <window class='worksheet' name='Offenses'>
+      <cards>
+        <edge name='left'>
+          <strip size='300'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{6F2CD281-201A-4D7F-95B7-C5C51AB79B56}' />
+    </window>
+    <window class='worksheet' name='Vehicle Related Offenses'>
+      <cards>
+        <edge name='left'>
+          <strip size='300'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{AE199B52-1AF6-472B-8003-FAAB8E7A5DBE}' />
+    </window>
+    <window class='worksheet' name='Map Breakdown'>
+      <cards>
+        <edge name='left'>
+          <strip size='232'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card mode='slider' param='[federated.0ff3in30e3wv4g1fgt99j1pnmgpe].[yr:REPORTED_DATE:ok]' type='filter' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0CA6ECC7-7434-4611-8ED5-384E85B14E1B}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='16' />
+      </viewpoint>
+      <simple-id uuid='{9A18FD09-8EC9-4185-898F-3714DA145B71}' />
+    </window>
+  </windows>
+</workbook>
